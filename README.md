@@ -34,6 +34,8 @@ For my purpose, the folder structure of the dataset is like:
 	* small
 	* glass
 	* ...
+	
+	
 This structure is required to train deepSORT. If you can't make this kind of structure then just create one folder inside your dataset folder and paste all the images. It's more like classification problem where you have Sub-folders as classes. If you have two types of object you want to track then you can do the following.
 -     1. dataset
 	* cars
