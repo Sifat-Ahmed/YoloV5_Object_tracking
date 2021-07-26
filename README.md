@@ -75,7 +75,7 @@ Once the training has been finished, you'll find the weights in **checkpoint** f
 
 Here is a thing, once you finish training and try testing this code will throw an error. When you create a model instance just pass the number of classes or by default it will have 751 or 2 neurons on the last layers. Be careful.
 
-**refer to feature_extractor.py Line no. 11.**
+**refer to deep_sort_pytorch/deep_sort/deep/feature_extractor.py Line no. 11.**
 ```
 self.net = Net(num_classes= number of classes)
 ```
