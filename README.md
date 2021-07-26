@@ -65,8 +65,9 @@ Jump into **deep_sort_pytorch > deep_sort > deep** folder. You will find the sou
 All you need is the **path of the dataset** and **train.py**
 
 Command:
-- python train.py --data-dir path/to/dataset 
-
+```
+python train.py --data-dir path/to/dataset 
+```
 Just make sure to edit the **deep_sort.yaml** in the configs folder in case you are resuming or have some pretrained weights. Just define the path of the cpkt. You shouldn't have it as we are training from scratch. So for now it doesn't matter.
 
 Once the training has been finished, you'll find the weights in **checkpoint** folder. You can use this weight for inference or to train again. In case of training again, --resume has to be true. 
@@ -75,12 +76,13 @@ Once the training has been finished, you'll find the weights in **checkpoint** f
 Here is a thing, once you finish training and try testing this code will throw an error. When you create a model instance just pass the number of classes or by default it will have 751 or 2 neurons on the last layers. Be careful.
 
 **refer to feature_extractor.py Line no. 11.**
--	self.net = Net(num_classes= number of classes)
-
+```
+self.net = Net(num_classes= number of classes)
+```
 
 Once you are done training deepSORT, just train YoloV5, follow the official training guide and then run detect_and_track.py, same as Yolov5's detect.py but requires few arguments of deepSORT. 
-
+```
 --deep_sort_weights path/to/deepSORT/weight/file
 --config_deepsort path/to/deepsort/config/file
-
+```
 You are all set. ;)
