@@ -82,7 +82,6 @@ self.net = Net(num_classes= number of classes)
 
 Once you are done training deepSORT, just train YoloV5, follow the official training guide and then run detect_and_track.py, same as Yolov5's detect.py but requires few arguments of deepSORT. 
 ```
---deep_sort_weights path/to/deepSORT/weight/file
---config_deepsort path/to/deepsort/config/file
+--deep_sort_weights path/to/deepSORT/weight/file   --config_deepsort path/to/deepsort/config/file
 ```
 You are all set. ;)
